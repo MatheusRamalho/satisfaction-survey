@@ -4,15 +4,14 @@ import { Header } from "../components/Header"
 import { FormField } from "../components/FormField"
 import { Button } from "../components/Button"
 
-import IconButton from '../assets/svgs/icon-twitter.svg';
 import { Modal } from "../components/Modal/Modal";
+import IconCheck from '../assets/svgs/icon-check.svg';
 
 export const Home = () => {
     const [justification, setJustification] = useState('');
     const [showModal, setShowModal] = useState(false);
-    const [disabled, setDisabled] = useState(true);
 
-    const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
         setShowModal(true);
@@ -36,10 +35,10 @@ export const Home = () => {
             <section id="section-satisfaction-survey">
                 <h6 hidden> satisfaction survey </h6>
 
-                <div className="container container--large container--small flex flex--column">
+                <div className="container container--small flex flex--column">
                     <Header.Root>
                         <Header.Title title="Pesquisa de satisfação" />
-                        <Header.Description description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo similique aliquam magnam incidunt possimus illum nostrum vero, ut aliquid laboriosam quia maiores quibusdam!0" />
+                        <Header.Description description="O melhor de cada pessoa acontece na hora que cada um se conhece de verdade. Não aguarde pela sorte: estude, estude-se." />
                     </Header.Root>
 
                     <form
@@ -48,11 +47,11 @@ export const Home = () => {
                         encType="multipart/form-data"
                     >
                         <fieldset form="form-satisfaction-survey">
-                            <legend> Informações </legend>
+                            <legend hidden> Informações </legend>
 
                             <FormField.Root>
                                 <FormField.Label>
-                                    Como você avalia sua experiencia na Trivento
+                                    <strong> 1 - </strong> Como você avalia sua experiencia na Trivento
                                     <FormField.Mandatory />
                                 </FormField.Label>
 
@@ -61,7 +60,7 @@ export const Home = () => {
 
                             <FormField.Root>
                                 <FormField.Label>
-                                    Explique o motivo da sua resposta
+                                    <strong> 2 - </strong> Explique o motivo da sua resposta
                                     <FormField.Mandatory />
                                 </FormField.Label>
 
@@ -73,10 +72,10 @@ export const Home = () => {
                             </FormField.Root>
                         </fieldset>
 
-                        <div className="">
+                        <div className="flex flex--center">
                             <Button.Root type="submit" disabled={justification ? false : true}>
                                 <Button.Text name="Finalizar" />
-                                <Button.Icon icon={IconButton} />
+                                <Button.Icon icon={IconCheck} />
                             </Button.Root>
                         </div>
                     </form>

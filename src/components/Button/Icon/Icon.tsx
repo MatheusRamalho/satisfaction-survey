@@ -1,11 +1,11 @@
 import { ReactSVG } from "react-svg";
 
-import arrowIcon from '../../../assets/svgs/icon-twitter.svg';
+import IconArrowRight from '../../../assets/svgs/icon-arrow-right.svg';
 
 import { ButtonIconWrapper } from "./Icon.styles";
 import { ButtonIconProps } from "./Icon.types";
 
-export const ButtonIcon = ({ icon = arrowIcon, iconDescription }: ButtonIconProps) => {
+export const ButtonIcon = ({ icon = IconArrowRight, iconDescription }: ButtonIconProps) => {
     return (
         <ButtonIconWrapper className="button-icon">
             <ReactSVG

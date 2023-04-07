@@ -20,7 +20,8 @@ declare module 'styled-components' {
 
             white50: string;
             white100: string;
-
+            gray50: string;
+            
             gradient50: string;
             gradient100: string;
         };

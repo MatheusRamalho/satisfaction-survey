@@ -23,9 +23,8 @@ export const App = () => {
 					<Navigation />
 
 					<main style={{
-						marginTop: '112px',
-						minHeight: 'calc(100vh - 312px)'
-						// minHeight: 'calc(100vh - 112px - 312px)'
+						marginTop: '88px',
+						minHeight: 'calc(100vh - 48px)'
 					}}>
 						<Routers />
 					</main>

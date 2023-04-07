@@ -11,11 +11,10 @@ export const Modal = ({ title, note, isItToShowModal = false, onModalClose }: Mo
     return (
         <ModalWrapper
             className={`modal ${isItToShowModal && 'modal--show'}`}
-            onClick={onModalClose}
         >
             <div className="modal__content">
                 <div className="modal__header">
-                    <button id="close-modal" onClick={close}> x </button>
+                    <button id="close-modal" onClick={onModalClose}> x </button>
                     <h5> {title} </h5>
                 </div>
 

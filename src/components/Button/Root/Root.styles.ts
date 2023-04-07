@@ -6,7 +6,7 @@ export const ButtonRootWrapper = styled.button`
     padding: ${props => props.theme.sizes.s8} ${props => props.theme.sizes.s24};
     border: none;
     border-radius: ${props => props.theme.sizes.s6};
-    background: ${props => props.theme.colors.primary50};
+    background: ${props => props.theme.colors.primary200};
     transition: all 1s ease;
 
     display: flex;
@@ -29,6 +29,5 @@ export const ButtonRootWrapper = styled.button`
 
     .button-icon {
         margin-left: ${props => props.theme.sizes.s16};
-        background-color: ${props => props.theme.colors.primary200};
     }
 `;

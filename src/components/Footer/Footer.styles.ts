@@ -2,15 +2,16 @@ import styled from "styled-components";
 
 export const FooterWrapper = styled.footer`
     width: 100%;
-    height: 19.5rem;
-    background: ${props => props.theme.colors.gradient50};
-    border-top: ${props => props.theme.sizes.s1} solid ${props => props.theme.colors.primary300};
+    height: ${props => props.theme.sizes.s48};
+    padding: ${props => props.theme.sizes.s24} ${props => props.theme.sizes.s48};
 
-    .brand {
-        max-width: ${props => props.theme.sizes.s120};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+        font-style: italic;
+        font-size: ${props => props.theme.sizes.s12};
+        color: ${props => props.theme.colors.gray50};
     }
-
-/*    .container:last-child {
-        border-top: ${props => props.theme.sizes.s1} solid ${props => props.theme.colors.primary300};
-    }*/
 `;

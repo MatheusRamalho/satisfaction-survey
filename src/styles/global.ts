@@ -62,14 +62,18 @@ export default createGlobalStyle`
     form {
         width: 100%;
         padding: ${props => props.theme.sizes.s16};
+
+        @media(max-width: ${props => props.theme.device.containerSm}) {
+            padding: 0;
+        }
     }
 
     fieldset {
         border: none;
         padding: ${props => props.theme.sizes.s16};
 
-        legend {
-            opacity: 0;
+        @media(max-width: ${props => props.theme.device.containerSm}) {
+            padding: 0;
         }
     }
 
@@ -157,7 +161,7 @@ export default createGlobalStyle`
         max-width: ${props => props.theme.device.containerXl};
         overflow: hidden;
         margin: 0 auto;
-        padding: ${props => props.theme.sizes.s24};
+        padding: ${props => props.theme.sizes.s48} ${props => props.theme.sizes.s24};
 
         &--large {
             padding: ${props => props.theme.sizes.s168} ${props => props.theme.sizes.s48} ${props => props.theme.sizes.s48} ${props => props.theme.sizes.s48};

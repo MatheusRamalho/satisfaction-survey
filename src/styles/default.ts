@@ -17,6 +17,8 @@ export const defaultTheme = {
         white50: '#FFFFFF',
         white100: '#F8F4F1',
 
+        gray50: '#636369',
+
         gradient50: 'linear-gradient(217.08deg, #071536 2.12%, #030917 98.96%)',
         gradient100: 'linear-gradient(224.78deg, #4AA6F7 8.12%, #1141BD 92.21%)',
     },

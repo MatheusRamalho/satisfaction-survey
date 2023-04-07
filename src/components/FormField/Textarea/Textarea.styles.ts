@@ -5,7 +5,7 @@ export const FormFieldTextareaWrapper = styled.textarea`
     height: 10rem;
     resize: none;
     padding: ${props => props.theme.sizes.s16};
-    border: ${props => props.theme.sizes.s1} solid ${props => props.theme.colors.white100};
+    border: ${props => props.theme.sizes.s1} solid ${props => props.theme.colors.primary300};
     border-radius: ${props => props.theme.sizes.s6};
     background-color: transparent;
     color: ${props => props.theme.colors.white50};
@@ -20,7 +20,7 @@ export const FormFieldTextareaWrapper = styled.textarea`
         font-style: italic;
         text-transform: uppercase;
         letter-spacing: ${props => props.theme.sizes.s1};
-        color: ${props => props.theme.colors.white100};
+        color: ${props => props.theme.colors.gray50};
     }
 
     &:disabled {
