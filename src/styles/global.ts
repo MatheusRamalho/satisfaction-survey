@@ -21,7 +21,7 @@ export default createGlobalStyle`
     &::-webkit-scrollbar {
         width: ${props => props.theme.sizes.s12};
         padding-right: ${props => props.theme.sizes.s4};
-        background: transparent;
+        background: ${props => props.theme.colors.primary400};
     }
 
     &::-webkit-scrollbar-thumb {
