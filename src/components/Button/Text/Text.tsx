@@ -3,6 +3,8 @@ import { ButtonTextProps } from "./Text.types";
 
 export const ButtonText = ({ name }: ButtonTextProps) => {
     return (
-        <ButtonTextWrapper> {name} </ButtonTextWrapper>
+        <ButtonTextWrapper>
+            {name}
+        </ButtonTextWrapper>
     );
 }
