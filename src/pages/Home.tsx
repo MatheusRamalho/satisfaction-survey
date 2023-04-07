@@ -3,8 +3,8 @@ import { FormEvent, useState } from "react";
 import { Header } from "../components/Header"
 import { FormField } from "../components/FormField"
 import { Button } from "../components/Button"
+import { Modal } from "../components/Modal";
 
-import { Modal } from "../components/Modal/Modal";
 import IconCheck from '../assets/svgs/icon-check.svg';
 
 export const Home = () => {
