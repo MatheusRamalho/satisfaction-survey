@@ -84,4 +84,10 @@ export const ModalWrapper = styled.div`
             height: auto;
         }
     }
+
+    @media screen and (max-width: ${props => props.theme.device.containerMd}) {
+        .modal__content {
+            width: 90%;
+        }
+    }
 `;
