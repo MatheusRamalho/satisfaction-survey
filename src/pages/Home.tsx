@@ -74,7 +74,7 @@ export const Home = () => {
                         </fieldset>
 
                         <div className="">
-                            <Button.Root type="submit" disabled={disabled}>
+                            <Button.Root type="submit" disabled={justification ? false : true}>
                                 <Button.Text name="Finalizar" />
                                 <Button.Icon icon={IconButton} />
                             </Button.Root>
@@ -86,10 +86,9 @@ export const Home = () => {
             <Modal
                 isItToShowModal={showModal}
                 onModalClose={handleModalClose}
-                title=""
-                description=""
-            >
-            </Modal>
+                title="Pesquisa de satisfação"
+                note={4}
+            />
         </>
     )
 }

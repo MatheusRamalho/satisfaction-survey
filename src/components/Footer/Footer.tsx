@@ -11,7 +11,9 @@ export const Footer = () => {
 
     return (
         <FooterWrapper>
-            <div className="container flex flex--start py py--5">
+
+
+            <div className="container flex flex--between py py--5">
                 <ReactSVG
                     className="brand"
                     src={brandNav}
@@ -19,9 +21,7 @@ export const Footer = () => {
                     title="Trivento"
                     aria-label="Logo marca da empresa Trivento educação - Logo composta por text na cor branca e três triangulos brancos sobrepostos"
                 />
-            </div>
 
-            <div className="container flex flex--between py py--5">
                 <div className="flex flex--start">
                     <ReactSVG
                         className="brand"
@@ -36,9 +36,6 @@ export const Footer = () => {
                     </p>
                 </div>
 
-                <div className="flex flex--start">
-                    <SocialMedia />
-                </div>
             </div>
         </FooterWrapper>
     );

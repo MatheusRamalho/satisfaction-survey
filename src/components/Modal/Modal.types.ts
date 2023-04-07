@@ -1,9 +1,6 @@
-import { ReactNode } from "react";
-
 export type ModalProps = {
     title: string;
-    description?: string;
-    children?: ReactNode;
+    note: number;
     isItToShowModal?: boolean;
     onModalClose?: () => void;
 }
