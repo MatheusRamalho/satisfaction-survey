@@ -2,7 +2,7 @@ export const defaultTheme = {
     title: 'default',
 
     font: {
-        family: "'Roboto', sans-serif",
+        family: "'Rubik', sans-serif",
     },
 
     colors: {
