@@ -22,7 +22,11 @@ export const FormFieldRadioItemWrapper = styled.div`
     align-items: center;
     justify-content: center;
 
-    &:hover {
+    &.active {
+        background-color: ${props => props.theme.colors.primary200};
+    }
+
+    &:hover:not(.active) {
         cursor: pointer;
         background-color: ${props => props.theme.colors.primary300};
         box-shadow: 0px 4px 8px rgba(81, 93, 61, 0.1);

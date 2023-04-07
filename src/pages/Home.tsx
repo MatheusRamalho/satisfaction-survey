@@ -17,6 +17,15 @@ export const Home = () => {
         let noteClicked = event.currentTarget;
         let dataValueNoteClicked = noteClicked.getAttribute('data-value');
 
+        let notes = document.querySelectorAll('.note-item');
+        notes.forEach(element => {
+            element.classList.remove('active');
+        });
+
+        notesListAddOrRemoveClass('remove');
+
+        noteClicked.classList.add('active');
+
         setNote(dataValueNoteClicked);
     }
 
@@ -33,8 +42,18 @@ export const Home = () => {
         setShowModal(true);
     }
 
+    const notesListAddOrRemoveClass = (type: string) => {
+        let notes = document.querySelectorAll('.note-item');
+
+        notes.forEach(element => {
+            type === 'add' && element.classList.add('active');
+            type === 'remove' && element.classList.remove('active');
+        });
+    }
+
     const handleModalClose = () => {
         setShowModal(false);
+        notesListAddOrRemoveClass('remove');
         setNote(0);
         setJustification('');
     }
