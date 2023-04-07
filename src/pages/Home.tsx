@@ -4,30 +4,39 @@ import { Header } from "../components/Header"
 import { FormField } from "../components/FormField"
 import { Button } from "../components/Button"
 import { Modal } from "../components/Modal";
+import { FormFieldRadioItem } from "../components/FormField/Radio/RadioItem";
 
 import IconCheck from '../assets/svgs/icon-check.svg';
 
 export const Home = () => {
+    const [note, setNote] = useState(0);
     const [justification, setJustification] = useState('');
     const [showModal, setShowModal] = useState(false);
+
+    const handleNoteClick = (event: any) => {
+        let noteClicked = event.currentTarget;
+        let dataValueNoteClicked = noteClicked.getAttribute('data-value');
+
+        setNote(dataValueNoteClicked);
+    }
 
     const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
-        setShowModal(true);
-
         console.log({
             pesquisaDeSatisfação: {
-                Nota: '',
+                Nota: note,
                 Justificativa: justification
             }
         });
 
-        setJustification('');
+        setShowModal(true);
     }
 
     const handleModalClose = () => {
         setShowModal(false);
+        setNote(0);
+        setJustification('');
     }
 
     return (
@@ -55,7 +64,18 @@ export const Home = () => {
                                     <FormField.Mandatory />
                                 </FormField.Label>
 
-                                <FormField.Radio />
+                                <FormField.Radio>
+                                    <FormFieldRadioItem value={1} onClick={event => handleNoteClick(event)} />
+                                    <FormFieldRadioItem value={2} onClick={event => handleNoteClick(event)} />
+                                    <FormFieldRadioItem value={3} onClick={event => handleNoteClick(event)} />
+                                    <FormFieldRadioItem value={4} onClick={event => handleNoteClick(event)} />
+                                    <FormFieldRadioItem value={5} onClick={event => handleNoteClick(event)} />
+                                    <FormFieldRadioItem value={6} onClick={event => handleNoteClick(event)} />
+                                    <FormFieldRadioItem value={7} onClick={event => handleNoteClick(event)} />
+                                    <FormFieldRadioItem value={8} onClick={event => handleNoteClick(event)} />
+                                    <FormFieldRadioItem value={9} onClick={event => handleNoteClick(event)} />
+                                    <FormFieldRadioItem value={10} onClick={event => handleNoteClick(event)} />
+                                </FormField.Radio>
                             </FormField.Root>
 
                             <FormField.Root>
@@ -73,7 +93,7 @@ export const Home = () => {
                         </fieldset>
 
                         <div className="flex flex--center">
-                            <Button.Root type="submit" disabled={justification ? false : true}>
+                            <Button.Root type="submit" disabled={note && justification ? false : true}>
                                 <Button.Text name="Finalizar" />
                                 <Button.Icon icon={IconCheck} />
                             </Button.Root>
@@ -86,7 +106,7 @@ export const Home = () => {
                 isItToShowModal={showModal}
                 onModalClose={handleModalClose}
                 title="Pesquisa de satisfação"
-                note={4}
+                note={note}
             />
         </>
     )
