@@ -1,33 +1,22 @@
-import { ReactSVG } from "react-svg";
+import Link from 'next/link'
+import Image from 'next/image'
 
-import brandNav from '../../assets/svgs/brand-nav.svg';
-import brandTrivento from '../../assets/svgs/brand-trivento.svg';
+import brand from '@/assets/brand.svg'
 
-import { NavigationWrapper } from "./Navigation.styles";
-import { Link } from "react-router-dom";
-
-export const Navigation = () => {
+export function Navigation() {
     return (
-        <NavigationWrapper>
-            <div className="container flex flex--between">
-                <Link to="/">
-                    <ReactSVG
-                        className="brand"
-                        src={brandNav}
+        <nav className="z-10 fixed top-0 left-0 right-0 w-full h-[88px] border-b border-b-gray-700 bg-gray-900 backdrop-blur-md">
+            <div className="container mx-auto h-full px-14 flex items-center justify-center">
+                <Link href="/">
+                    <Image
+                        className="w-20"
+                        src={brand}
                         role="img"
                         title="Trivento"
-                        aria-label="Logo marca da do sistema NAV da empresa Trivento, composto por uma lampada amarela e o texto NAV - nosso ambiente virtual"
+                        alt="Logo marca da do sistema NAV da empresa Trivento, composto por uma lampada amarela e o texto NAV - nosso ambiente virtual"
                     />
                 </Link>
-
-                <ReactSVG
-                    className="brand"
-                    src={brandTrivento}
-                    role="img"
-                    title="Trivento"
-                    aria-label="Logo marca da empresa Trivento educação - Logo composta por text na cor branca e três triangulos brancos sobrepostos"
-                />
             </div>
-        </NavigationWrapper>
-    );
+        </nav>
+    )
 }

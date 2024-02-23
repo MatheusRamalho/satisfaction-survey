@@ -1,57 +1,36 @@
-<h1 align="center"> Satisfaction Survey </h1>
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-<p align="center">
- Projeto feito como teste para uma vaga de front-end para empresa Trivento.
-</p>
+## Getting Started
 
-<p align="center">
-  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licença">Licença</a>
-</p>
+First, run the development server:
 
-<p align="center">
-  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
-</p>
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-<br>
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-<p align="center">
-  <img alt="Preview do projeto" src=".github/preview.png" width="100%">
-</p>
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## 🚀 Tecnologias
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
----
+## Learn More
 
-Esse projeto foi desenvolvido com as seguintes tecnologias:
+To learn more about Next.js, take a look at the following resources:
 
-- Vite
-- React JS
-- TypeScript
-- Styled components
-- Git
-- Github
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## 💻 Projeto
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
----
+## Deploy on Vercel
 
-Página para pesquisa de satisfação sobre servidos/faculdades da Trivento. <br />
-Acesso ao código do projeto [Repositório Github](https://github.com/MatheusRamalho/satisfaction-survey)
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## 🔖 Layout
-
----
-
-Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/file/tmR2n6qjfq08e7lnCdoCXK/Satisfaction-Survey---Trivento?node-id=0%3A1&t=sgJTqzES575w2VIv-1). <br />
-É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
-
-## 🔖 Licença
-
-Esse projeto está sob a licença MIT.
-
----
-
-Projeto proposto pela Trivento como teste <br/>
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

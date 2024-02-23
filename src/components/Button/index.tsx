@@ -1,6 +1,6 @@
-import { ButtonRoot } from "./Root/Root";
-import { ButtonText } from "./Text/Text";
-import { ButtonIcon } from "./Icon/Icon";
+import { ButtonRoot } from './ButtonRoot'
+import { ButtonText } from './ButtonText'
+import { ButtonIcon } from './ButtonIcon'
 
 export const Button = {
     Root: ButtonRoot,

@@ -1,9 +1,10 @@
-import { FormFieldRoot } from './Root/Root';
-import { FormFieldLabel } from './Label/Label';
-import { FormFieldLabelMandatory } from './Mandatory/Mandatory';
-import { FormFieldInput } from './Input/Input';
-import { FormFieldTextarea } from './Textarea/Textarea';
-import { FormFieldRadio } from './Radio/Radio';
+import { FormFieldRoot } from './FormFieldRoot'
+import { FormFieldLabel } from './FormFieldLabel'
+import { FormFieldLabelMandatory } from './FormFieldLabelMandatory'
+import { FormFieldInput } from './FormFieldInput'
+import { FormFieldTextarea } from './FormFieldTextarea'
+import { FormFieldRadio } from './FormFieldRadio'
+import { FormFieldRadioItem } from './FormFieldRadioItem'
 
 export const FormField = {
     Root: FormFieldRoot,
@@ -11,5 +12,6 @@ export const FormField = {
     Mandatory: FormFieldLabelMandatory,
     Input: FormFieldInput,
     Textarea: FormFieldTextarea,
-    Radio: FormFieldRadio
+    Radio: FormFieldRadio,
+    RadioItem: FormFieldRadioItem,
 }
