@@ -3,7 +3,7 @@ import Link from 'next/link'
 export const GithubButton = () => {
     return (
         <Link
-            className="size-8 rounded-md bg-gray-700 flex items-center justify-center group hover:bg-gray-600"
+            className="size-8 rounded-md bg-zinc-700 flex items-center justify-center group hover:bg-zinc-600"
             href="https://github.com/MatheusRamalho"
             target="_blank"
         >

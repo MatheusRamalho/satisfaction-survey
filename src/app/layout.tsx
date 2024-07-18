@@ -4,7 +4,6 @@ import { Rubik } from 'next/font/google'
 import '../styles/globals.css'
 
 import { Footer } from '@/components/Footer'
-import { Navigation } from '@/components/Navgation'
 
 const rubik = Rubik({ subsets: ['latin'] })
 
@@ -21,13 +20,8 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={rubik.className}>
-                <div className="bg-gray-900">
-                    <Navigation />
-
-                    <main className="min-h-[calc(100vh-48px)] mt-[88px]">
-                        {children}
-                    </main>
-
+                <div className="bg-zinc-950">
+                    <main className="min-h-screen">{children}</main>
                     <Footer />
                 </div>
             </body>

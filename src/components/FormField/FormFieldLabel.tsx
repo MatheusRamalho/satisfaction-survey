@@ -7,7 +7,7 @@ interface FormFieldLabelProps extends LabelHTMLAttributes<HTMLLabelElement> {
 export function FormFieldLabel({ children, ...props }: FormFieldLabelProps) {
     return (
         <label
-            className="relative block w-full mb-8 pb-6 text-base border-b border-b-gray-600 text-gray-300"
+            className="relative block w-full mb-4 pb-6 text-base text-zinc-300"
             {...props}
         >
             {children}

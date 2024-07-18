@@ -10,7 +10,7 @@ import { Modal } from '@/components/Modal'
 import IconCheck from '@/assets/check.svg'
 
 export default function Home() {
-    const [note, setNote] = useState(0)
+    const [note, setNote] = useState<number>(0)
     const [justification, setJustification] = useState('')
     const [showModal, setShowModal] = useState(false)
 
@@ -18,15 +18,6 @@ export default function Home() {
     function handleNoteClick(event: any) {
         const noteClicked = event.currentTarget
         const dataValueNoteClicked = noteClicked.getAttribute('data-value')
-        const notes = document.querySelectorAll('.note-item')
-
-        notes.forEach((element) => {
-            element.classList.remove('!bg-green-300')
-        })
-
-        notesListAddOrRemoveClass('remove')
-
-        noteClicked.classList.add('!bg-green-300')
 
         setNote(dataValueNoteClicked)
     }
@@ -71,76 +62,85 @@ export default function Home() {
                     >
                         <fieldset
                             form="form-satisfaction-survey"
-                            className="border-none p-1 sm:p-4"
+                            className="border-none"
                         >
                             <legend hidden> Informações </legend>
 
                             <FormField.Root>
                                 <FormField.Label>
                                     <strong className="text-white font-bold">
-                                        {' '}
                                         1 -{' '}
-                                    </strong>{' '}
+                                    </strong>
                                     Como você avalia sua experiencia na Trivento
                                     <FormField.Mandatory />
                                 </FormField.Label>
 
                                 <FormField.Radio>
                                     <FormField.RadioItem
+                                        isActive={note}
                                         value={1}
                                         onClick={(event) =>
                                             handleNoteClick(event)
                                         }
                                     />
                                     <FormField.RadioItem
+                                        isActive={note}
                                         value={2}
                                         onClick={(event) =>
                                             handleNoteClick(event)
                                         }
                                     />
                                     <FormField.RadioItem
+                                        isActive={note}
                                         value={3}
                                         onClick={(event) =>
                                             handleNoteClick(event)
                                         }
                                     />
                                     <FormField.RadioItem
+                                        isActive={note}
                                         value={4}
                                         onClick={(event) =>
                                             handleNoteClick(event)
                                         }
                                     />
                                     <FormField.RadioItem
+                                        isActive={note}
                                         value={5}
                                         onClick={(event) =>
                                             handleNoteClick(event)
                                         }
                                     />
                                     <FormField.RadioItem
+                                        isActive={note}
                                         value={6}
                                         onClick={(event) =>
                                             handleNoteClick(event)
                                         }
                                     />
                                     <FormField.RadioItem
+                                        isActive={note}
                                         value={7}
                                         onClick={(event) =>
                                             handleNoteClick(event)
                                         }
                                     />
                                     <FormField.RadioItem
+                                        isActive={note}
                                         value={8}
                                         onClick={(event) =>
                                             handleNoteClick(event)
                                         }
                                     />
                                     <FormField.RadioItem
+                                        isActive={note}
                                         value={9}
                                         onClick={(event) =>
                                             handleNoteClick(event)
                                         }
                                     />
                                     <FormField.RadioItem
+                                        isActive={note}
                                         value={10}
                                         onClick={(event) =>
                                             handleNoteClick(event)
@@ -172,7 +172,7 @@ export default function Home() {
                         <div className="flex items-center justify-center">
                             <Button.Root
                                 type="submit"
-                                disabled={!(note && justification)}
+                                disabled={note === 0 || !justification}
                             >
                                 <Button.Text name="Finalizar" />
                                 <Button.Icon icon={IconCheck} />
